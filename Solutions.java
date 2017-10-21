@@ -7,7 +7,7 @@ public class Solutions {
 	public static void main(String[] args) {
 		
 	}
-
+    //Added by Ballares, Justine Paul C.
     /**
      * @param {int} n the length of the string
      * @param {String} s contains the word representation (B or W)
