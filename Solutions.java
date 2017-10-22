@@ -111,7 +111,7 @@ public class Solutions {
 	//Added by Gregorio, Marc Lawrence S.
 	/**
 	 *
-	 * @param s Number of Anton's collection
+	 * @param s Number of Anton's collection.
 	 * @return the total number of faces of the shapes
 	 **/
 	public static int sumOfFaces(int s)	{
