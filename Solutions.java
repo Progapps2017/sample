@@ -58,4 +58,53 @@ public class Solutions {
 		k1 += bGroup.length;
 		return k1 + "\n" + k2;
 	}
+	
+	//Added by Pocaan, Dominic P.
+	/**
+	 * 
+	 * @param a Length of the String b input.
+	 * @param b String input.
+	 * @return
+	 */
+	public static String antonAndDanik(int a, String b){
+		boolean check = false;
+		if (b.length() != a) {
+			check = false;
+		} else{
+			check = true;
+		}
+		
+		if (check != true) {
+			System.out.print("!!!");
+			System.exit(0);
+		}
+		
+		int winAnton = 0;
+		int winDanik = 0;
+		String x = b.toUpperCase();
+		
+		for (int i = 0; i < x.length(); i++) {
+			if ('A' == x.charAt(i)) {
+				winAnton++;
+			}
+		}
+		
+		for (int i = 0; i < x.length(); i++) {
+			if ('D' == x.charAt(i)) {
+				winDanik++;
+			}
+		}
+		
+		String result = "";
+		
+		if (winAnton > winDanik) {
+			result = "Anton";
+		} else if (winAnton < winDanik) {
+			result = "Danik";
+		} else {
+			result = "Friendship";
+		}
+		
+		return result;
+	}
 }
