@@ -4,6 +4,7 @@ import java.util.*;
  */
 
 public class Solutions {
+	static Scanner key = new Scanner(System.in);
 	public static void main(String[] args) {
 		
 	}
@@ -107,4 +108,32 @@ public class Solutions {
 		
 		return result;
 	}
+	//Added by Gregorio, Marc Lawrence S.
+	/**
+	 *
+	 * @param s Number of Anton's collection
+	 * @return the total number of faces of the shapes
+	 **/
+	public static int sumOfFaces(int s)	{
+		int result = 0;
+        	String[] shapes = {"tetrahedron", "cube", "octahedron", "dodecahedron", "icosahedron"};
+        	for (int i = 0; i < s; i++) {
+            		int numOfFace = 0;
+            		String sh = key.nextLine();
+            		sh = sh.toLowerCase();
+            		if (sh.equals(shapes[0])) {
+                		numOfFace = 4;
+           		} else if (sh.equals(shapes[1])) {
+                		numOfFace = 6;
+            		} else if (sh.equals(shapes[2])) {
+                		numOfFace = 8;
+            		} else if (sh.equals(shapes[3])) {
+                		numOfFace = 12;
+            		} else {
+                		numOfFace = 20;
+            		}	
+            		result += numOfFace;
+        	}
+        	return result;
+    }
 }
