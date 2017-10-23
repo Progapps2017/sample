@@ -136,4 +136,52 @@ public class Solutions {
         	}
         	return result;
     }
+	
+	//Added by San Juan, Jan Paula S.
+	/**
+	 *@param length Number of letters in a message
+	 *@param message Contains the message
+	 *@param array An array of the maximum lengths of substring each letter can appear in
+	 *@return number of ways to split the message, length of the longest substring and minimum number of substrings
+	 */
+	public static int[] mahmoudAndAMessage(int length, String message, int[] array){
+		int[] array26 = new int[26];
+		int[] dp1 = new int[1005];
+		int[] dp2 = new int[1005];
+		int maxSubstring = 0;
+		boolean problem = false;
+		for (int i = 0; i < 26; i++){
+			if (array26.length >= array.length) {
+				array26[i] = array[i];
+			} else {
+				do {
+					problem = false;
+					try {
+						array26[i] = Integer.parseInt(new Scanner(System.in).next());
+					} catch(NumberFormatException x) {
+						problem = true;
+						System.out.print(" ");
+					}
+				} while(problem == true);
+			}
+			System.out.print(" ");
+		}
+		dp1[0] = 1;
+		dp2[0] = 0;
+		for(int i = 1; i <= length; i++){
+			int f = 0;
+			dp2[i] = length;
+			for(int i2 = i - 1; i2 >= 0; i2--) {
+				f = Math.max(f, i - array[message.charAt(i2) - 'a']);
+				if(f > i2) {
+					continue;
+				}
+				dp1[i] = (dp1[i] + dp1[i2]) % 1000000007;
+				dp2[i] = Math.min(dp2[i], 1 + dp2[i2]);
+				maxSubstring = Math.max(maxSubstring, i - i2);
+			}
+		}
+		int[] output = {dp1[length], maxSubstring, dp2[length]};
+		return output;
+	}	
 }
