@@ -135,5 +135,49 @@ public class Solutions {
             		result += numOfFace;
         	}
         	return result;
-    }	
+    	}
+	/**
+	Added by ur boi Kyle Christian Mangahas, Spawn of Conrado and Teresa Mangahas
+	*/
+	public static void Anton  {
+		Scanner scan = new Scanner(System.in);
+		String s = scan.nextLine();
+		String[] numbersString = s.split(" ");
+		int sum = 0;
+		int[] numbersNum = new int[numbersString.length];
+		for(int i = 0; i<numbersString.length; i++){
+			numbersNum[i] = Integer.parseInt(numbersString[i]);
+		}
+		sum = getSum(numbersNum);
+		System.out.println(sum);
+	}
+
+	static int getSum(int[] array) {
+		int sum = 0;
+		for(;;){
+			if(array[0] == 0) {
+				break;
+			} else if(array[2] == 0) {
+				break;
+			} else if(array[3] == 0) {
+				break;
+			}
+			sum += 256;
+			array[0]--;
+			array[2]--;
+			array[3]--;
+			
+		}
+		for(;;){
+			if(array[1] == 0){
+				break;
+			} else if(array[0] == 0) {
+				break;
+			}
+			sum += 32;
+			array[1]--;
+			array[0]--;
+		}
+		return(sum);
+	}
 }
