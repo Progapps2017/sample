@@ -47,7 +47,29 @@ public class Solutions {
 				}
 
 				if (x + 1 == s.length() && bCount != 0) {
-					k2 += bCount;
+					k2 += bCount;public static String hulk(int n){
+		try{
+        	String a = "";
+        	if(n < 1 || n > 100){
+	        	return "0";
+	        }
+	        for(int c=1; c<=n; c++){
+	        	if(c%2==1){
+	        		a = a+"I hate ";
+	        	} else {
+	        		a = a+"I love ";
+	        	}
+	        	if (c==n){
+	        		a = a+"it";
+	        	}else{
+	        		a = a+"that ";
+	        	}
+       		}
+       		return a;    
+        } catch(Exception e){
+        	return "0";
+        }
+	}
 				}
 			}
 		} else {
@@ -229,5 +251,34 @@ public class Solutions {
 		}
 		int[] output = {dp1[length], maxSubstring, dp2[length]};
 		return output;
+	}
+	
+	//Added by Lawrence Christian R. Pagalanan
+	/**
+	 * @param in number of layers of love and hate
+	 * @return Dr. Banner's feelings in one line (e.g. I hate that I love it)
+	 */
+	public static String hulk(int in){
+		try{
+			String a = "";
+			if (n < 1 || n > 100){
+				return "0";
+			}
+			for (int c=1; c<=n; c++){
+				if(c%2==1){
+					a = a+"I hate ";
+				} else {
+					a = a+"I love ";
+				}
+				if (c==n){
+					a = a+"it";
+				} else {
+					a = a+"that ";
+				}
+			}
+			return a;
+		} catch (Exception e) {
+			return "0";
+		}
 	}
 }
