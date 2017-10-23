@@ -151,7 +151,9 @@ public class Solutions {
 		sum = getSum(numbersNum);
 		System.out.println(sum);
 	}
-
+	/**
+	@return Sum of the numbers formed (256 and 32)
+	*/
 	static int getSum(int[] array) {
 		int sum = 0;
 		for(;;){
