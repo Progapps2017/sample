@@ -114,7 +114,7 @@ public class Solutions {
 	 * @param s Number of Anton's collection.
 	 * @return the total number of faces of the shapes
 	 **/
-	public static int sumOfFaces(int s)	{
+	 static int sumOfFaces(int s)	{
 		int result = 0;
         	String[] shapes = {"tetrahedron", "cube", "octahedron", "dodecahedron", "icosahedron"};
         	for (int i = 0; i < s; i++) {
