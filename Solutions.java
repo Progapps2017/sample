@@ -158,6 +158,26 @@ public class Solutions {
         	}
         	return result;
     	}
+    
+    /**
+     @author Andrada, Jason Roy
+     @return finalVal The average distance to travel
+    */
+    public static int TheNewYearMeetingFriends(){
+    	int finalVal = 0;
+    	Scanner input = new Scanner(System.in);
+    
+    	int firstInt = input.nextInt();
+    	int secInt = input.nextInt();
+    	int thirdInt = input.nextInt();    
+     
+    	int minVal = Math.min(firstInt,Math.min(secInt,thirdInt));
+    	int maxVal = Math.max(firstInt,Math.max(secInt,thirdInt));
+    	int finalVal = maxVal - minVal;
+    	
+    	return finalVal;
+    }
+    
 	/**
 	Added by ur boi Kyle Christian Mangahas, Spawn of Conrado and Teresa Mangahas
 	*/
