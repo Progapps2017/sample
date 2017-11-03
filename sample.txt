@@ -4,5 +4,8 @@ Pocaan, Dominic
 Waduhek waduhek pocanaenae
 sample lang
 
+<<<<<<< HEAD
 isandsakdnaksnd
 sample
+=======
+>>>>>>> parent of 5b658ae... dasndsak
