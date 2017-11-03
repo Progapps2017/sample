@@ -301,6 +301,32 @@ public class Solutions {
 			return "0";
 		}
 	}
+
+	public static String misAndGame(){
+        int round = key.nextInt();
+        int mis = 0, chr = 0, draw = 0;
+
+        for (int i = 0; i < round; i++) {
+            int x = key.nextInt();
+            int y = key.nextInt();
+            if (x > y) {
+                mis++;
+            } else if (y > x) {
+                chr++;
+            } else {
+                draw++;
+            }
+        }
+        if (mis == chr) {
+            System.out.println("Friendship is magic!^^");
+        } else if ((mis > chr && mis > draw) || (mis >= rounds - draw)) {
+            System.out.println("Mishka");
+        } else if (chr > mis && chr > draw || (chr >= rounds - draw)) {
+            System.out.println("Chris");
+        } else {
+            System.out.println();
+        }
+	}
 }
 	/*Added by Viviene Foz
 	**/
@@ -317,4 +343,3 @@ public class LuckyYear{
 		}
 	}
 }
-
